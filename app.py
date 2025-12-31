@@ -77,7 +77,11 @@ if len(data1) > 2 and len(data2) > 2:
     # ---------------------------------------------------------
     res_col1, res_col2 = st.columns(2)
     with res_col1:
-        st.metric("P-value", f"{p_value:.4f}")
+        if p_value < 0.0001:
+    p_display = f"{p_value:.2e}" # 例: 1.23e-07 と表示される
+    else:
+        p_display = f"{p_value:.4f}"
+    st.metric("P-value", p_display)
         st.write(f"採用された検定: **{test_name}**")
     
     with res_col2:
