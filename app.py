@@ -155,3 +155,14 @@ if len(data_dict) >= 2:
 
 else:
     st.info("解析を始めるには、各グループに3つ以上の数値を入力してください。")
+    # --- 画面の最下部に免責事項を表示 ---
+    st.divider() # 区切り線
+    st.caption("【免責事項 / Disclaimer】")
+    st.caption("""
+    本ツールは統計学的判断および解析の補助を目的としています。
+    計算には信頼性の高いライブラリを使用していますが、最終的な解釈および結論については、
+    利用者が専門的知見に基づいて判断してください。
+
+    This tool is for assistive purposes. Final interpretations and conclusions 
+    should be made by the user based on professional expertise.
+    """)
