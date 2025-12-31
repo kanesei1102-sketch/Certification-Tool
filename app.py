@@ -13,6 +13,20 @@ def get_sig_label(p):
     return "ns"
 
 # 1. ページ構成
+with st.sidebar:
+        # 既存の入力フォームなどのコード...
+        st.write("---") # 区切り線
+        st.markdown("""
+        ### 【Notice / ご案内】
+        This tool is a beta version. If you plan to use results from this tool in your publications or conference presentations, **please contact the developer (Seiji Kaneko) in advance.**
+
+        本ツールは現在開発中のベータ版です。論文掲載や学会発表等に使用される際は、**事前に開発者（金子）まで必ず一報ください。**
+
+        👉 **[Contact & Feedback Form / 連絡窓口](https://forms.gle/xgNscMi3KFfWcuZ1A)**
+
+        We will provide guidance on validation support and proper acknowledgments/co-authorship.
+        バリデーションのサポートや、謝辞・共著の記載についてご案内させていただきます。
+        """)
 st.set_page_config(page_title="Ultimate Stat Engine", layout="wide")
 st.title("🔬 Ultimate Scientific Stat Engine")
 st.markdown("データの性質を自動診断し、最適な検定と報告用レポートを作成します。")
